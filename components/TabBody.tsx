@@ -7,7 +7,7 @@ interface Props {
 
 const TabBody = (props: Props) => {
   const [selectedTabIndex, setTabIndex] = useState(0);
-  const handleTab = (i) => {
+  const handleTab = (i: number) => {
     setTabIndex(i);
   };
   return (
@@ -15,7 +15,7 @@ const TabBody = (props: Props) => {
       {props.tabIndex === 0 && (
         <>
           <div className="card">
-            {[7, 7, 7].map((_, i) => (
+            {[7, 7, 7].map((_: any, i: number) => (
               <Image
                 key={i}
                 height="210"

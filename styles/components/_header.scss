@@ -1,0 +1,50 @@
+@import "../constants/animations";
+@import "../constants/base";
+@import "../constants/mixins";
+@import "../constants/variables";
+@import "../constants/fonts";
+
+.my-header {
+  width: 100%;
+  padding: 1rem;
+  @include flexBox(row, space-between, center);
+  align-self: flex-start;
+
+  .logo-box {
+    width: 28%;
+    @include flexBox(row, space-around, center);
+    .logo {
+      border-radius: 50%;
+    }
+    & > h5 {
+      letter-spacing: 0.4rem;
+      text-transform: uppercase;
+      font-size: 1.7rem;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .avatar-box {
+    height: 100%;
+    width: 28%;
+    padding: 0.4rem;
+    border-radius: 5rem;
+    @include flexBox(row, space-between, center);
+    background-color: #e5e5e5;
+    .avatar {
+      border-radius: 50%;
+    }
+    & > h5 {
+      font-size: 1.4rem;
+      margin: 0;
+      padding: 0 0 0 1rem;
+      transition: ease-in 0.2s;
+      cursor: pointer;
+      &:hover {
+        color: #777;
+        transform: translateY(-0.1rem);
+      }
+    }
+  }
+}

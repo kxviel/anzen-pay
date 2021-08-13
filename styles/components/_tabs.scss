@@ -1,0 +1,30 @@
+@import "../constants/animations";
+@import "../constants/base";
+@import "../constants/mixins";
+@import "../constants/variables";
+@import "../constants/fonts";
+
+.tabs {
+  padding: 1rem;
+  width: 100%;
+  height: 10vh;
+  margin-top: 3vh;
+  @include flexBox(row, center, center);
+  .clicked {
+    font-weight: bold;
+    border-bottom-style: solid;
+    border-bottom-color: #66dbe2;
+  }
+  & > p {
+    height: 100%;
+    width: 33.3%;
+    font-size: 1.4rem;
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-color: #dfdfdb;
+    &:hover {
+      background-color: #ecebeb;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "../constants/animations";
+@import "../constants/base";
+@import "../constants/mixins";
+@import "../constants/variables";
+@import "../constants/fonts";
+
+.headings {
+  height: 21%;
+  width: 100%;
+  padding: 2.1rem;
+  @include flexBox(column, space-between, center);
+  h2 {
+    letter-spacing: 0.7rem;
+  }
+  .crumbs {
+    width: 77%;
+    font-size: 1.4rem;
+    @include flexBox(row, space-between, center);
+  }
+}
+.accordion {
+  height: 63%;
+  width: 100%;
+  padding: 1.4rem;
+  @include flexBox(column, space-evenly, center);
+  .accordion-item {
+    width: 100%;
+    color: #000;
+    background-color: white;
+    margin: 1rem;
+    padding: 0.7rem;
+    transition: ease-in 0.2s;
+    border-radius: 0.5rem;
+    .accordion-content {
+      @include flexBox(row, space-between, center);
+      padding: 1.2rem;
+      font-size: 1.2rem;
+    }
+    .accordion-title {
+      @include flexBox(row, space-between, center);
+      padding: 0.7rem;
+      font-size: 1.2rem;
+      &:hover {
+        cursor: pointer;
+        color: #464646;
+      }
+    }
+  }
+}
+.total {
+  width: 100%;
+  padding: 0 4rem;
+  @include flexBox(row, space-between, center);
+}

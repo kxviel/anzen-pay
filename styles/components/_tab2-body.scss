@@ -1,0 +1,49 @@
+@import "../constants/animations";
+@import "../constants/base";
+@import "../constants/mixins";
+@import "../constants/variables";
+@import "../constants/fonts";
+
+.upi {
+  height: 66vh;
+  width: 100%;
+  padding: 0.7rem;
+  .card {
+    button {
+      background-color: black;
+      color: #fff;
+      border: none;
+      padding: 1.4rem;
+      border-radius: 1.2rem;
+      transition: ease-in 0.1s;
+      &:hover {
+        background-color: #3f3f3f;
+        cursor: pointer;
+        transform: translateY(-0.1rem);
+      }
+      &:active {
+        transform: translateY(0.1rem);
+      }
+    }
+    @include flexBox(column, space-evenly, center);
+    width: 100%;
+    .radio-div {
+      width: 100%;
+      border-radius: 1rem;
+      @include flexBox(row, space-evenly, center);
+      &:hover {
+        background-color: azure;
+      }
+    }
+    .clicked {
+      width: 100%;
+      border-radius: 1rem;
+      @include flexBox(row, space-evenly, center);
+      border-style: solid;
+      border-color: #66dbe2;
+      &:hover {
+        background-color: azure;
+      }
+    }
+  }
+}

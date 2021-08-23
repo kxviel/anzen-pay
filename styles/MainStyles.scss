@@ -46,18 +46,11 @@
   }
 }
 
-// .root {
-//   @include respond(tab-land) {
-//     // width < 1200?
-
-//   }
-
-//   @include respond(tab-port) {
-//     // width < 900?
-//     font-size: 50%;
-//   }
-
-//   @include respond(phone) {
-//     font-size: 75%;
-//   }
-// }
+.root {
+  @include respond(phone) {
+    font-size: 75%;
+    .content {
+      overflow-x: scroll;
+    }
+  }
+}

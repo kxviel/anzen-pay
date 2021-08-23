@@ -57,8 +57,8 @@ const TabBody = (props: Props) => {
                 >
                   <Image
                     className="aa"
-                    height="100"
-                    width="100"
+                    height="56"
+                    width="56"
                     src={`/upi${i}.svg`}
                     alt=""
                   />

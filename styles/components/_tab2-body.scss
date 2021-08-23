@@ -37,10 +37,11 @@
     }
     .clicked {
       width: 100%;
-      border-radius: 1rem;
+
       @include flexBox(row, space-evenly, center);
-      border-style: solid;
-      border-color: #66dbe2;
+      border-left-style: solid;
+      border-left-color: #66dbe2;
+      border-left-width: 0.7rem;
       &:hover {
         background-color: azure;
       }

@@ -23,9 +23,7 @@
   height: 100vh;
   width: 100vw;
   background-color: #261c2c;
-
   @include flexBox(column, center, center);
-
   .content {
     @include flexBox(row, space-between, center);
     width: 96vw;
@@ -46,11 +44,23 @@
   }
 }
 
-.root {
-  @include respond(phone) {
-    font-size: 75%;
+@include respond(phone) {
+  .root {
+    height: 100%;
+    @include flexBox(column, center, center);
     .content {
-      overflow-x: scroll;
+      @include flexBox(column, space-between, center);
+      width: 100%;
+      height: 100%;
+
+      .left {
+        width: 91%;
+        height: 100vh;
+      }
+      .right {
+        width: 84%;
+        height: 100vh;
+      }
     }
   }
 }
